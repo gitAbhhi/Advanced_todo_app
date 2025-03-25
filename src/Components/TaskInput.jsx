@@ -9,6 +9,7 @@ const TaskInput = () => {
   const [task, setTask] = useState("");
   const [priority, setPriority] = useState("High"); // Default priority
   const [activity, setActivity] = useState("Indoor");
+  const { todos, showFinished } = useSelector((state) => state.todos);
   const { weather, weatherLoading, weatherError } = useSelector(state => state.todos);
   const dispatch = useDispatch();
 
@@ -76,7 +77,7 @@ const TaskInput = () => {
 </div>
 
       <div>
-        <input type="checkbox" onChange={() => dispatch(toggleShowFinished())} name="show finished" id="show" /><span className='mx-2 text-base text-gray-500'>Show finished</span>
+        <input type="checkbox"   checked={showFinished} onChange={() =>dispatch(toggleShowFinished())} name="show finished" id="show" /><span className='mx-2 text-base text-gray-500'>Show finished</span>
       </div>
     </div>
   )

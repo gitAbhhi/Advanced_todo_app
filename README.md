@@ -1,12 +1,56 @@
-# React + Vite
+# 📋 Advanced To-Do App with React, Redux, and TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An advanced **To-Do List Application** built using **React, Redux Toolkit, Redux Thunk, and Tailwind CSS**. This app features **task management, priority sorting, authentication, API integration, and weather fetching for outdoor tasks**.
 
-Currently, two official plugins are available:
+##  Features Implemented
+### **Core Features**
+- **Add, Edit, Delete Tasks** 
+- **Mark tasks as completed** 
+- **Sort tasks by priority** (High → Medium → Low)
+- **LocalStorage support** for persistence 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔐 **Authentication (Mocked using Redux)**
+- **Login & Logout functionality** 
+- **Only logged-in users can access tasks** 
 
-## Expanding the ESLint configuration
+### 🌦 **Weather API Integration**
+- **Fetches weather for outdoor tasks**
+- Uses **OpenWeather API** to fetch temperature & conditions.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 **Beautiful UI & Responsive Design**
+- **TailwindCSS** for styling 
+- Fully **mobile-friendly** 
+
+---
+
+## 🛠️ **Tech Stack**
+- **Frontend:** React, Redux Toolkit, Tailwind CSS
+- **State Management:** Redux & Redux Thunk
+- **API Calls:** Axios (for weather data)
+- **Persistent Storage:** LocalStorage
+
+---
+
+## 📸 **Screenshots**
+### 🔑 Login Page
+![Login](screenshots/login.png)
+
+### 📋 Task List (Authenticated)
+![Task List](screenshots/task-list.png)
+
+### 🌦 Weather Integration for Outdoor Tasks
+![Weather](screenshots/weather.png)
+
+---
+
+## 🏗️ **Setup & Installation**
+Follow these steps to **run the project locally**.
+
+### 1️⃣ **Clone the repository**
+
+git clone https://github.com/your-username/advanced-todo-app.git
+cd advanced-todo-app
+npm install
+REACT_APP_WEATHER_API_KEY=your_openweather_api_key
+npm run dev
+
