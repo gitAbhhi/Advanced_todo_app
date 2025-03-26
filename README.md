@@ -46,11 +46,11 @@ An advanced **To-Do List Application** built using **React, Redux Toolkit, Redux
 
 ## **Setup & Installation**
 
---Follow these steps to **run the project locally**.
+Follow these steps to **run the project locally**.
 
 - git clone https://github.com/your-username/advanced-todo-app.git
 - cd advanced-todo-app
 - npm install
-- REACT_APP_WEATHER_API_KEY=your_openweather_api_key
+- WEATHER_API_KEY=your_openweather_api_key(in todoSlice file)
 - npm run dev
 
