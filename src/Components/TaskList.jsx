@@ -4,26 +4,25 @@ import { deleteTodo, editTodo, toggleTodo } from "../redux/feature/todoSlice";
 
 const TaskList = () => {
 
-
-
   const { todos, showFinished } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   const [editId, setEditId] = useState(null);
   const [editText, setEditText] = useState("");
 
-
-
+  // priority set function
   const sortedTodos = [...todos].sort((a, b) => {
     const priorityOrder = { High: 1, Medium: 2, Low: 3 };
     return priorityOrder[a.priority] - priorityOrder[b.priority];
   });
 
+  //Handle Edit
   const handleEditClick = (id, task) => {
     setEditId(id); // Store the ID of the task being edited
     setEditText(task); // Set the current task text in the input
   };
 
+  // Handle Edit Save
   const handleEditSave = (id) => {
     if (editText.trim()) {
       dispatch(editTodo({ id, task: editText })); // Update the task in Redux
@@ -47,6 +46,7 @@ const TaskList = () => {
                 className="task sm:flex items-center w-full justify-between my-3"
               >
                 <div className="flex gap-3 items-center">
+
                   {/* ✅ Checkbox for Marking Completion */}
                   <input
                     name={item.id}
@@ -62,7 +62,6 @@ const TaskList = () => {
                       type="text"
                       value={editText}
                       onChange={(e) => setEditText(e.target.value)}
-                      // onBlur={() => handleEditSave(item.id)} // Save when clicking outside
                       onKeyDown={(e) => e.key === "Enter" && handleEditSave(item.id)} // Save on Enter key
                       className="border border-gray-400 p-1 w-52"
                       autoFocus
@@ -87,6 +86,7 @@ const TaskList = () => {
                 </div>
 
                 <div className="buttons flex h-full  justify-end sm:w-[25%]">
+
                   {/* ✅ Show "Save" button if editing, otherwise show "Edit" */}
                   {editId === item.id ? (
                     <button

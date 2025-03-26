@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios";
 
 
+// Fetch Weather Information
 export const fetchWeather = createAsyncThunk(
   "todos/fetchWeather",
   async (city, thunkAPI) => {
@@ -20,7 +21,7 @@ export const fetchWeather = createAsyncThunk(
   }
 );
 
-
+//Initial State
 const initialState = {
   todos: JSON.parse(localStorage.getItem("todos")) || [],
   showFinished: true,
@@ -33,26 +34,31 @@ const todoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
+
     addTodo: (state, action) => {
       state.todos.push(action.payload);
       localStorage.setItem('todos', JSON.stringify(state.todos))
     },
+
     editTodo: (state, action) => {
       state.todos = state.todos.map(todo =>
         todo.id === action.payload.id ? { ...todo, task: action.payload.task } : todo
       );
-      localStorage.setItem("todos", JSON.stringify(state.todos)); // Save updated todos
+      localStorage.setItem("todos", JSON.stringify(state.todos)); 
     },
+
     deleteTodo: (state, action) => {
       state.todos = state.todos.filter(todo => todo.id !== action.payload);
       localStorage.setItem("todos", JSON.stringify(state.todos));
     },
+
     toggleTodo: (state, action) => {
       state.todos = state.todos.map(todo =>
         todo.id === action.payload ? { ...todo, isCompleted: !todo.isCompleted } : todo
       );
       localStorage.setItem("todos", JSON.stringify(state.todos));
     },
+
     toggleShowFinished: (state) => {
       state.showFinished = !state.showFinished;
     }

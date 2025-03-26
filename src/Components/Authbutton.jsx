@@ -7,6 +7,7 @@ const AuthButton = () => {
     const { isAuthenticated, user } = useSelector((state) => state.auth);
     const [username, setUsername] = useState("");
 
+    //Handle Login
     const handleLogin = () => {
         if (username.trim()) {
             dispatch(login(username));

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// ✅ Check if user is already logged in (persist state)
+//Check if user is already logged in (persist state)
 const initialState = {
     isAuthenticated: localStorage.getItem("isAuthenticated") === "true",
     user: localStorage.getItem("user") || null, // Store username if needed
