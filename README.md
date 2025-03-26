@@ -33,13 +33,14 @@ An advanced **To-Do List Application** built using **React, Redux Toolkit, Redux
 
 ## 📸 **Screenshots**
 ### 🔑 Login Page
-![Login](screenshots/login.png)
+![Login](screenshots/Login.png)
 
 ### 📋 Task List (Authenticated)
-![Task List](screenshots/task-list.png)
+![Task List](screenshots/Task_list.png)
 
-### 🌦 Weather Integration for Outdoor Tasks
-![Weather](screenshots/weather.png)
+### Responsive Design
+![Responsive](screenshots/ResponsiveLogin.png)
+![Responsive2](screenshots/Responsive_Task_list.png)
 
 ---
 
@@ -49,8 +50,8 @@ Follow these steps to **run the project locally**.
 ### 1️⃣ **Clone the repository**
 
 git clone https://github.com/your-username/advanced-todo-app.git
-cd advanced-todo-app
-npm install
-REACT_APP_WEATHER_API_KEY=your_openweather_api_key
-npm run dev
+** cd advanced-todo-app
+** npm install
+** REACT_APP_WEATHER_API_KEY=your_openweather_api_key
+** npm run dev
 

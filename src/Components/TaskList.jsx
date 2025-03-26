@@ -62,7 +62,7 @@ const TaskList = () => {
                       type="text"
                       value={editText}
                       onChange={(e) => setEditText(e.target.value)}
-                      onBlur={() => handleEditSave(item.id)} // Save when clicking outside
+                      // onBlur={() => handleEditSave(item.id)} // Save when clicking outside
                       onKeyDown={(e) => e.key === "Enter" && handleEditSave(item.id)} // Save on Enter key
                       className="border border-gray-400 p-1 w-52"
                       autoFocus
