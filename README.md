@@ -2,6 +2,8 @@
 
 An advanced **To-Do List Application** built using **React, Redux Toolkit, Redux Thunk, and Tailwind CSS**. This app features **task management, priority sorting, authentication, API integration, and weather fetching for outdoor tasks**.
 
+**Live Demo:** [Click here to view the app](https://advanced-todo-app-beige.vercel.app/)
+
 ##  Features Implemented
 ### **Core Features**
 - **Add, Edit, Delete Tasks** 

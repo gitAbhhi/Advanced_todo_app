@@ -6,13 +6,27 @@ const AuthButton = () => {
     const dispatch = useDispatch();
     const { isAuthenticated, user } = useSelector((state) => state.auth);
     const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     //Handle Login
     const handleLogin = () => {
-        if (username.trim()) {
-            dispatch(login(username));
-            setUsername(""); // Clear input after login
+        // if (username.trim()) {
+        //     dispatch(login(username));
+        //     setUsername(""); // Clear input after login
+        // }
+        if (username.trim() === "") {
+            alert("Please enter your name.");
+            return;
         }
+
+        if (password.trim() === "") {  
+            alert("Please enter your password.");
+            return;
+        }
+
+        dispatch(login(username)); // ✅ Only store username in Redux
+        setUsername("");  
+        setPassword("");
     };
 
     return (
@@ -42,7 +56,9 @@ const AuthButton = () => {
                     </div>
                     <div className=" items-center">
                         <div className="text-1xl font-semibold mb-2">Password </div>
-                        <input type="password" placeholder="Enter your Password" className="border p-2 rounded-md" />
+                        <input  type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}   placeholder="Enter your Password" className="border p-2 rounded-md" />
                     </div>
 
                     <button
