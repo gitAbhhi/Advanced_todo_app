@@ -44,8 +44,9 @@ An advanced **To-Do List Application** built using **React, Redux Toolkit, Redux
 
 ---
 
- **Setup & Installation**
-Follow these steps to **run the project locally**.
+## **Setup & Installation**
+
+--Follow these steps to **run the project locally**.
 
 - git clone https://github.com/your-username/advanced-todo-app.git
 - cd advanced-todo-app
