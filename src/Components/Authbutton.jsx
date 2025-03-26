@@ -10,10 +10,6 @@ const AuthButton = () => {
 
     //Handle Login
     const handleLogin = () => {
-        // if (username.trim()) {
-        //     dispatch(login(username));
-        //     setUsername(""); // Clear input after login
-        // }
         if (username.trim() === "") {
             alert("Please enter your name.");
             return;
