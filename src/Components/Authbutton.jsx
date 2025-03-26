@@ -53,7 +53,7 @@ const AuthButton = () => {
                     <div className=" items-center">
                         <div className="text-1xl font-semibold mb-2">Password </div>
                         <input  type="password"
-                    value={password}
+                    value={password} onKeyDown={(e) => e.key === "Enter" && handleLogin()}
                     onChange={(e) => setPassword(e.target.value)}   placeholder="Enter your Password" className="border p-2 rounded-md" />
                     </div>
 
